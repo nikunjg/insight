@@ -5,9 +5,9 @@ if (sessionStorage.getItem("sessionId") == null) {
 tabId = sessionStorage.getItem("sessionId");
 
 var queryParam = "";
-var anURI = "http://localhost:8080/DynamicCookies/img.gif";
-var refrenceURI = "http://localhost:8080/DynamicCookies";
-var originURI = "http://localhost:8080";
+var anURI = "http://10.137.35.9:8080/DynamicCookies/img.gif";
+var refrenceURI = "http://10.137.35.9:8080/DynamicCookies";
+var originURI = "http://10.137.35.9:8080";
 
 var frameDiv = document.createElement("div");
 frameDiv.id = "frameContainer";
@@ -122,7 +122,7 @@ if (ANuser == false) {
             if (typeof data !== "undefined" && data != "") {
                 document.cookie = "ANuser=" + data;
                 ANuser = data;
-                xhrRegister(ANuser, "localhost", document.location.href)
+                xhrRegister(ANuser, "10.137.35.9", document.location.href)
             }
         }
 
@@ -130,7 +130,7 @@ if (ANuser == false) {
 } else {
     console.log("existing an user on domain", ANuser);
 
-    xhrRegister(ANuser, "localhost", document.location.href)
+    xhrRegister(ANuser, "10.137.35.9", document.location.href)
 }
 
 function extractDomain(url) {
