@@ -27,6 +27,7 @@ var browserCharset = d.characterSet;
 
 var screenResolution = screen.height + "x" + screen.width;
 var browserUserAgent = navigator.userAgent;
+var referrer = d.referrer;
 
 
 function xhrRegister(uid, ip, page) {
@@ -61,6 +62,8 @@ function xhrRegister(uid, ip, page) {
         queryParam += "domain_name=" + domainName + "&";
     if (typeof tabId !== "undefined")
         queryParam += "browser_tab_id=" + tabId;
+    if (typeof referrer !=="undefined")
+        queryParam += "referrer=" + referrer;    
 
     (new Image()).src = anURI + "?" + queryParam;""
 
