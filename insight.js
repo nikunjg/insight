@@ -61,7 +61,7 @@ function xhrRegister(uid, ip, page) {
     if (typeof domainName !== "undefined")
         queryParam += "domain_name=" + domainName + "&";
     if (typeof tabId !== "undefined")
-        queryParam += "browser_tab_id=" + tabId;
+        queryParam += "browser_tab_id=" + tabId + "&";
     if (typeof referrer !=="undefined")
         queryParam += "referrer=" + referrer;    
 
